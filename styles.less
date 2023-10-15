@@ -18,13 +18,46 @@ html {
     justify-content: center;
     align-items: center;
     .back-c {
-        width: 100%%;
-        height: 600px;
+        width: 100%;
+        height: 100%;
     }
 }
+.menu-abs {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #162E8A;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    padding: 20px;
+    z-index: 3;
+    ul.menus {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        li {
+            list-style: none;
+            &+li {
+                margin-top: 30px;
+            }
+            a {
+                color: #fff;
+                font-size: 34px;
+                font-weight: 700;
+                text-decoration: none;
+                span {
 
+                }
+            }
+        }
+    }
+}
 .nav-bar {
     position: fixed;
+    z-index: 100;
     width: 100%;
     padding: 0 20px;
     height: 70px;
@@ -40,8 +73,12 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: start;
         &:hover {
             align-items: end;
+        }
+        &.collapsed {
+            align-items: start;
         }
         span.line {
             height: 4px;
@@ -75,5 +112,10 @@ html {
         font-size: 44px;
         font-weight: 700; 
         word-wrap: break-word;
+    }
+    .arrow-d {
+        width: 40px; 
+        height: 64px;
+        z-index: 0;
     }
 }
