@@ -27,12 +27,15 @@ html {
     width: 100%;
     height: 100%;
     background-color: #162E8A;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: start;
     flex-direction: column;
     padding: 20px;
     z-index: 3;
+    &.active {
+        display: flex;
+    }
     ul.menus {
         display: flex;
         flex-direction: column;
@@ -73,12 +76,8 @@ html {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        align-items: start;
-        &:hover {
-            align-items: end;
-        }
-        &.collapsed {
-            align-items: start;
+        &.active {
+            align-items: center;
         }
         span.line {
             height: 4px;
